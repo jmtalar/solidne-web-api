@@ -1,4 +1,5 @@
 using MySpot.Api.Exceptions;
+using MySpot.Api.ValueObjects;
 
 namespace MySpot.Api.Entities;
 
@@ -8,14 +9,14 @@ public class Reservation
     public Guid ParkingSpotId { get; private set; }
     public string EmployeeName { get; private set; }
 
-    public string LicensePlate { get; private set; }
+    public LicensePlate LicensePlate { get; private set; }
     public DateTime Date { get; private set; }
 
     public Reservation(
         Guid id,
         Guid parkingSpotId,
         string employeeName,
-        string licensePlate,
+        LicensePlate licensePlate,
         DateTime date
     )
     {
@@ -26,13 +27,5 @@ public class Reservation
         Date = date;
     }
 
-    public void ChangeLicensePlate(string licensePlate)
-    {
-        if (string.IsNullOrWhiteSpace(licensePlate))
-        {
-            throw new EmptyLicensePlateException();
-        }
-
-        LicensePlate = licensePlate;
-    }
+    public void ChangeLicensePlate(LicensePlate licensePlate) => LicensePlate = licensePlate;
 }

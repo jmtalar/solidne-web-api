@@ -20,12 +20,12 @@ namespace MySpot.Api.Entities
             Name = name;
         }
 
-        public void AddReservation(Reservation reservation)
+        public void AddReservation(Reservation reservation, DateTime now)
         {
             var isInvalidDate =
                 reservation.Date.Date < From
                 || reservation.Date.Date > To
-                || reservation.Date.Date < DateTime.UtcNow.Date;
+                || reservation.Date.Date < now.Date;
 
             if (isInvalidDate)
             {
@@ -43,10 +43,7 @@ namespace MySpot.Api.Entities
             _reservations.Add(reservation);
         }
 
-        public void RemoveReservation(Guid id)
-        {
-            var reservation = Reservations.FirstOrDefault(x => x.Id == id);
-            _reservations.Remove(reservation);
-        }
+        public void RemoveReservation(Guid reservationId) =>
+            _reservations.RemoveWhere(x => x.Id == reservationId);
     }
 }
