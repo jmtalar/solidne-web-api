@@ -7,9 +7,9 @@ using MySpot.Api.ValueObjects;
 namespace MySpot.Api.Commands;
 
 public record CreateReservation(
-    Guid ParkingSpotId,
-    Guid ReservationId,
-    DateTime Date,
-    string EmployeeName,
+    ParkingSpotId ParkingSpotId,
+    ReservationId ReservationId,
+    Date Date,
+    EmployeeName EmployeeName,
     LicensePlate LicensePlate
 );

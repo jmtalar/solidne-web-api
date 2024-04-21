@@ -2,4 +2,4 @@ using MySpot.Api.ValueObjects;
 
 namespace MySpot.Api.Commands;
 
-public record ChangeReservationLicensePlate(Guid ReservationId, LicensePlate LicensePlate);
+public record ChangeReservationLicensePlate(ReservationId ReservationId, string LicensePlate);

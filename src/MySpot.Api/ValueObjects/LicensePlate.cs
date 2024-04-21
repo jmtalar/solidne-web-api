@@ -20,7 +20,8 @@ public record LicensePlate
         Value = value;
     }
 
-    public static implicit operator LicensePlate(string value) => new LicensePlate(value);
+    public static implicit operator string(LicensePlate licensePlate) => licensePlate?.Value;
 
-    public static implicit operator string(LicensePlate value) => new LicensePlate(value);
+    public static implicit operator LicensePlate(string licensePlate) =>
+        new LicensePlate(licensePlate);
 }
