@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25C90941-E5A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySpot.Api", "src\MySpot.Api\MySpot.Api.csproj", "{C55F714A-55E2-4640-8A81-4CEE89568AC9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2F9001C4-0711-4F7D-A81B-54A051AD9287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySpot.Tests.Unit", "tests\MySpot.Tests.Unit\MySpot.Tests.Unit.csproj", "{91C8B72C-976A-4339-8CEA-1265D84A6EE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{C55F714A-55E2-4640-8A81-4CEE89568AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55F714A-55E2-4640-8A81-4CEE89568AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55F714A-55E2-4640-8A81-4CEE89568AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C8B72C-976A-4339-8CEA-1265D84A6EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C8B72C-976A-4339-8CEA-1265D84A6EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C8B72C-976A-4339-8CEA-1265D84A6EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C8B72C-976A-4339-8CEA-1265D84A6EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C55F714A-55E2-4640-8A81-4CEE89568AC9} = {25C90941-E5A2-4222-8473-07604BB46F66}
+		{91C8B72C-976A-4339-8CEA-1265D84A6EE5} = {2F9001C4-0711-4F7D-A81B-54A051AD9287}
 	EndGlobalSection
 EndGlobal
